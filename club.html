@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pojok Bola</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="/img/logo(192).png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#380a0a" />
+  </head>
+  <body>
+    <nav>
+        <div class="nav-wrapper ">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html?back=true" class="brand-logo left"><i class="large material-icons">arrow_back</i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="body-content" style="padding-top: 15px;"></div>
+    <div class="container" id="preloader" style="display: flex; height: 100vh; width: 100%;">
+      <div class="preloader-wrapper big active" style="margin: auto;">
+          <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                  <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                  <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                  <div class="circle"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/club.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          setTimeout(() => {
+                document.getElementById("body-content").style.display = "block";
+                document.getElementById("preloader").style.display = "none";
+            }, 2000);
+          getSchedulesID();
+          setClubID()
+        });
+    </script>
+  </body>
+</html>

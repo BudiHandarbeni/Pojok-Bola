@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pojok Bola</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="/img/logo(192).png">
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#380a0a" />
+  </head>
+  <body>
+    <div id="content" class="col s12"></div>
+    <div class="container" id="preloader" style="display: flex; height: 10vh; width: 100%;">
+      <div class="preloader-wrapper big active" style="margin: auto;">
+          <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                  <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                  <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                  <div class="circle"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/leaguedetail.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+                document.getElementById("content").style.display = "block";
+                document.getElementById("preloader").style.display = "none";
+            }, 2000);
+        getStandings();
+        getSchedules();
+        getScores();
+      });
+    </script>
+  </body>
+</html>

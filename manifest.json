@@ -1,0 +1,38 @@
+{
+    "name": "Pojok Bola",
+    "gcm_sender_id": "491526580279",
+    "short_name": "Pojok Bola",
+    "description": "Jadwal bola",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#cc9d39",
+    "theme_color": "#cc9d39",
+    "icons": [
+        {
+            "src": "/img/Logo (128).png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo(192).png",
+            "sizes": "194x194",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/Logo (194).png",
+            "sizes": "194x194",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+
+      
+}
